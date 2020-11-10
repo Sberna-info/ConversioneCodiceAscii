@@ -10,11 +10,13 @@ namespace ConversioneCodiceAscii
     {
         static void Main(string[] args)
         {
-            Console.Write("inserisci la lettere che vuoi convertire: ");
+            ushort decimale = 0;
+            Console.Write("inserisci una lettera:");
             char carattere = Convert.ToChar(Console.ReadLine());
-            ushort carattereascii = 0;
-            carattereascii = carattere;
-            Console.WriteLine($"la lettera - {carattere}, Carattere in ascii - {carattereascii}");
+            decimale = carattere;
+            Console.WriteLine($"La lettera - {carattere} convertito in ASCII è - {decimale}");
+            string esadecimale = decimale.ToString("X");
+            Console.WriteLine($"Il numero decimale convertito in esadecimale è :{esadecimale}");
             Console.ReadLine();
 
         }
